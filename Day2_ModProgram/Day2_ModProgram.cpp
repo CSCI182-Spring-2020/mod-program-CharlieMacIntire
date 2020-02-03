@@ -18,6 +18,26 @@ int GetMinValue(int valueA, int valueB)
 		return valueB;
 }
 
+int Mod1(int ValueA, int ValueB)
+{
+	if (ValueB != 0) 
+	{
+		int ValueC = ValueA / ValueB;
+		int Mod = ValueA - (ValueC * ValueB); //Modulous Calculation
+		return Mod;
+	}
+}
+
+int Mod2(int ValueA, int ValueB)
+{
+	if (ValueB != 0) {
+		while (ValueA >= ValueB) {
+			int ValueC = ValueA - ValueB;
+			return ValueC;
+		}
+	}
+
+}
 int main()
 {
 	//    std::cout << "Hello World!\n"; 
@@ -26,9 +46,10 @@ int main()
 
 	// Find the minimum value and pretty print it to the screen
 	std::cout << "Min Value: " << GetMinValue(a, b) << "\n";
+	std::cout << "Mod1 Modulous: " << Mod1(a, b) << "\n";
+	std::cout << "Mod2 Modulous: " << Mod2(a, b) << "\n";
 
 }
-
 
 
 
